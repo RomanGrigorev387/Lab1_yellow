@@ -29,7 +29,7 @@ function getUserInput(){
     }
     else
     {
-        return -9
+        return -10
     }
     
 }
@@ -38,8 +38,8 @@ function output(backPack){
     if(backPack == -9){
         console.log("Error: Invalid arguments")
     }
-    else{
-        console.log(backPack)
+    else if(backPack == -10){
+        console.log("Error: Invalid arguments count")
     }
     
 }
