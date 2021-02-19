@@ -1,6 +1,9 @@
 
 
+
+
 backPack = getUserInput()
+dataWorks(backPack)
 output(backPack)
 
 function getUserInput(){
@@ -41,5 +44,25 @@ function output(backPack){
     else if(backPack == -10){
         console.log("Error: Invalid arguments count")
     }
+    else{
+        console.log("All pass")
+    }
     
+}
+
+function dataWorks(backPack){
+    var buyPrice = []
+    var beginPrice = []
+    var endPrice = []
+    
+    for(k = 0; k < backPack.length; k=k+3){
+        buyPrice.push(backPack[k])
+    }
+    for(k = 1; k < backPack.length; k=k+3){
+        beginPrice.push(backPack[k])
+    }
+    for(k = 2; k < backPack.length; k=k+3){
+        endPrice.push(backPack[k])
+    }
+    console.log("Закупочные цены:   " + buyPrice + "\nНачальные цены:    " + beginPrice +  "\nКонечные цены:     " + endPrice)
 }
